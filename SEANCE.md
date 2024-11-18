@@ -2,6 +2,7 @@
 *Ce guide est une version revisitée du workshop **wrangling-genomics**. Voir la référence pour le lien.*
 
 ![[Pasted image 20241116173846.png]]
+![image 1](Pasted image 20241116173846.png"Title")
 
 ### Prérequis
 
@@ -36,7 +37,8 @@ mkdir Analyse && cd Analyse
 - Référence (.fasta.gz) :  
     Après notre déconvenue avec les séquences de _Plasmodium falciparum (qui nécessitent plus de ressources RAM et CPU), j'opte pour une espèce plus digeste, si je peux m'exprimer ainsi :  Escherichia coli_ (E. coli).
 
-> [!WARNING] ESPACE UTILISE
+> [!WARNING]
+> ESPACE UTILISE
 > **Le téléchargement des ressources en termes d'espace disque (~ 600 Mo).**
 
 Création du dossier pour le stockage de la référence :
