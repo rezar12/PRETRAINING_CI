@@ -343,9 +343,6 @@ Capture **enregistrement** :
 capture **valider l'enregistrement avec la touche `enter`**:
 ![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120943.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120943.png)
 
-![[Pasted image 20241117120943.png]]
-
-
 > [!IMPORTANT]
 > **Visualisation du contenue**
 > exécutez la commande `cat NexteraPE.fa`
@@ -365,8 +362,7 @@ ls -l
 
 Capture de la sortie :
 
-![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png)
-![[Pasted image 20241117123417.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117123417.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117123417.png)
 
 Exécutons Trimmomatic sur les séquences :
 
