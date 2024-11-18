@@ -472,7 +472,7 @@ Capture de la sortie :
 
 > [!IMPORTANT]
 > **EXERCICE**
-> **La compilation des nouveaux rapports pour les fichiers issus du trimming est laissée en exercice. **
+> *La compilation des nouveaux rapports pour les fichiers issus du trimming est laissée en exercice.*
 
 Capture de la sortie :
 
@@ -492,16 +492,16 @@ Après trimming SRR2589044_1:
 ![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134442.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134442.png)
 
 *Avant Multiqc* 
-![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20fastqc-status-check-heatmap.png.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20fastqc-status-check-heatmap.png.png)
-![[fastqc-status-check-heatmap.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap.png)
 *Après  Trimming Multiqc*
-![[fastqc-status-check-heatmap (2).png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap(2).png](https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap(2).png)
 
 
 
-> [!NOTE] **Résumer :**
+> [!NOTE]
+> **Résumer :**
 > 
-> A comparer les captures des résultats avant et après le trimming met clairement en évidence une amélioration de la qualité des séquences. En effet, le trimming permet d’éliminer les bases de faible qualité, les adaptateurs résiduels augmentant ainsi  le score de qualité reads.
+> A comparer les captures des résultats avant et après le trimming met clairement en évidence une amélioration de la qualité des séquences. En effet,le trimming permet d’éliminer les bases de faible qualité, les adaptateurs résiduels augmentant ainsi  le score de qualité reads.
 
 ### Mapping (BWA & SAMTOOLS)
 
@@ -517,7 +517,8 @@ cd reference
 bwa index e_coli.fasta
 ```
 
-> [!INFO] ALTERNATIVE
+> [!IMPORTANT]
+> **ALTERNATIVE**
 > **SAMTOOLS**, via sa sous-commande `faidx`, permet aussi d'indexer une référence.
 
 
@@ -526,12 +527,10 @@ Explication des arguments :
 	- Permet d'indexer la  reference  *e_coli.fasta* produisant ainsi les fichiers évoqués dans le tableau ci-dessous.
 
 capture indexation :
-
-![[Pasted image 20241117174754.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117174754.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117174754.png)
 
 capture contenue du dossier  reference:
-
-![[Pasted image 20241117174935.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117174935.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117174935.png)
 
 ---
 Tableau descriptif des fichiers générés après l'indexation :
@@ -550,7 +549,7 @@ Tableau descriptif des fichiers générés après l'indexation :
 - Le répertoire des fichiers du trimming
 - Le répertoire de la référence indexée
 
-![[Pasted image 20241117180451.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117180451.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117180451.png)
 
 **Génération du fichier SAM**  
 Créons un dossier **SAM** pour le stockage de nos fichiers SAM. Puis, pour chaque fichier Paire-End du trimming `fastq.gz`, générons son fichier `.sam` via `bwa mem`.
@@ -592,8 +591,7 @@ cat SAM/SRR2584861.sam | head -n 4 | grep '@RG'
 ```
 
 Capture de la sortie 
-
-![[Pasted image 20241117204917.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117204917.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117204917.png)
 
 - **`reference/e_coli.fasta`**
     - Chemin vers la séquence de référence indexée (le génome sur lequel les reads seront alignés).
@@ -607,8 +605,8 @@ Capture de la sortie
     - Spécifie le fichier de sortie au format **SAM**, ici `SAM/SRR2589044.sam`. Ce fichier contiendra les alignements des reads sur la référence.
 
 Capture du répertoire SAM :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117182526.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117182526.png)
 
-![[Pasted image 20241117182526.png]]
 
 **Génération du fichier BAM**  
 Créons un dossier **BAM** pour le stockage de nos fichiers BAM. Puis, pour chaque fichier SAM, générons son fichier BAM.
@@ -659,15 +657,18 @@ Explication des commandes:
 	- Indexer le fichier.
 
 capture du répertoire BAM :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117224920.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117224920.png)
 
-![[Pasted image 20241117224920.png]]
-
-> [!NOTE] **Résumer :**
+> [!NOTE]
+> **Résumer :**
 > 
-> Le mapping est une étape essentielle pour aligner les reads sur une séquence de référence. Grâce à des outils comme BWA et SAMTOOLS, on peut non seulement aligner les séquences,les trier,et éliminer les duplications. Facilitant l’appel de variants ou l’étude des mutations. 
+> Le mapping est une étape essentielle pour aligner les reads sur une séquence de référence. Grâce à des outils comme BWA et SAMTOOLS, on peut non
+> seulement aligner les séquences,les trier,et éliminer les duplications. Facilitant l’appel de variants ou l’étude des mutations. 
 
-> [!INFO] Usage de Picard
-> Il est important de noter qu’en lieu et place des commandes SAMTOOLS pour le tri et le marquage des duplicats, nous aurions pu utiliser les outils proposés par **Picard**, tels que **`SortSam`** pour le tri et **`MarkDuplicates`** pour le marquage des duplicats.
+> [!IMPORTANT]
+> **Usage de Picard**
+> Il est important de noter qu’en lieu et place des commandes SAMTOOLS pour le tri et le marquage des duplicats, nous aurions pu utiliser les outils
+> proposés par **Picard**, tels que **`SortSam`** pour le tri et **`MarkDuplicates`** pour le marquage des duplicats.
 
 ### Variants Calling (Freebayes):
 
@@ -706,8 +707,8 @@ cat bam_list.txt
 ```
 
 Capture de la sortie :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117234525.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117234525.png)
 
-![[Pasted image 20241117234525.png]]
 
 - Génération du fichier "merge" 
 
@@ -730,7 +731,8 @@ Explication des arguments  :
     - Redirige la sortie vers un fichier **VCF**  
 
 
-> [!NOTE] "MERGE"
+> [!NOTE]
+> **"MERGE"**
 > Dans le cas de la génération d'un fichier "merge", le fichier `.bam` est remplacé par l'argument suivant :
 > -   **`--bam-list bam_list.txt`**
 > 	- Dans le cas d'une génération de fichier "merge" prend un fichier (`bam_list.tx`) contenant les noms  des fichiers `_dedup.bam`.
@@ -739,8 +741,7 @@ Explication des arguments  :
 
 
 Capture du répertoire `variant` :
-
-![[Pasted image 20241117234807.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117234807.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117234807.png)
 
 Affichage de quelques lignes de nos fichiers VCF en ignorant les informations d'entête :
 
@@ -751,8 +752,7 @@ grep -v '^##' variant/merge.vcf | head -n 3
 ```
 
 Capture de la sortie :
-
-![[Pasted image 20241118073730.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073730.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073730.png)
 
 Pour le SRR2584861 :
 
@@ -761,8 +761,7 @@ grep -v '^##' variant/SRR2584861.vcf | head -n 3
 ```
 
 Capture de la sortie :
-
-![[Pasted image 20241118073810.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073810.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073810.png)
 
 Pour le SRR2589044 :
 
@@ -771,9 +770,10 @@ grep -v '^##' variant/SRR2589044.vcf | head -n 3
 ```
 
 Capture de la sortie :
-![[Pasted image 20241118073848.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073848.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118073848.png)
 
-> [!INFO] REMARQUE
+> [!IMPORTANT]
+> **REMARQUE**
 > Dans le fichier "merge", vous trouverez l'ensemble des noms d'accession des séquences utilisées pour sa création. Ce fichier **VCF merge** représente l'union des mutations présentes dans les différents fichiers VCF qui le composent. Cela permet de regrouper et de visualiser en un seul endroit toutes les variations génétiques identifiées à partir des différentes séquences analysées.
 
 ##### Initiation aux filtrage de variant (BCFTOOLS)
@@ -787,8 +787,7 @@ bcftools query -f '%CHROM  %POS  %REF  %ALT{0}\n' variant/merge.vcf | head -n 3
 ```
 
 Capture de la sortie :
-
-![[Pasted image 20241118082037.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118082037.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118082037.png)
 
 - Afficher quelques lignes des mutations de type SNPs d'un fichier VCF :
 
@@ -797,8 +796,7 @@ bcftools view -v snps variant/merge.vcf | grep -v '^##' | head -n 3
 ```
 
 Capture de la sortie :
-
-![[Pasted image 20241118083148.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118083148.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118083148.png)
 
 - Réciproquement des indels :
 
@@ -807,11 +805,12 @@ bcftools view -v snps variant/merge.vcf | grep -v '^##' | head -n 3
 ```
 
 Capture de la sortie :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118083720.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241118083720.png)
 
-![[Pasted image 20241118083720.png]]
-
-> [!INFO]  VCFFILTER ALTERNATIVE AUX OPTIONS DE FILTRE DE BCFTOOLS
-> BCFTOOLS est un outil polyvalent et largement utilisé pour le variant calling, au même titre que Freebayes, GATK ou VARSCAN. Si vous recherchez une solution légère, rapide et efficace, VCFFILTER est une excellente option pour filtrer vos variants selon des critères précis.
+> [!IMPORTANT]
+> **VCFFILTER ALTERNATIVE AUX OPTIONS DE FILTRE DE BCFTOOLS**
+> BCFTOOLS est un outil polyvalent et largement utilisé pour le variant calling, au même titre que Freebayes, GATK ou VARSCAN. Si vous recherchez une
+> solution légère, rapide et efficace, VCFFILTER est une excellente option pour filtrer vos variants selon des critères précis.
 
 ---
 Liste de quelques outils populaires pour le variant calling :
@@ -825,13 +824,18 @@ Liste de quelques outils populaires pour le variant calling :
 
 ***
 
-> [!NOTE] **Résumer :**
+> [!NOTE]
+>  **Résumer :**
 > 
-> Le variant calling permet d’identifier les variations génétiques au sein d’un génome étudié. Grâce à des outils comme Freebayes dans ce guide, nous avons pu détecter ces variations sous forme de fichiers VCF, exploitables pour des analyses ultérieures.
+> Le variant calling permet d’identifier les variations génétiques au sein d’un génome étudié. Grâce à des outils comme Freebayes dans ce guide, nous
+> avons pu détecter ces variations sous forme de fichiers VCF, exploitables pour des analyses ultérieures.
 
 
-> [!INFO] Automatisation du workflow
-> Lorsque vous travaillez avec un grand nombre de séquences, exécuter les commandes manuellement pour chaque fichier devient rapidement difficile. Dans de tels cas, l'automatisation devient essentielle. L'idée est de créer des scripts ou des workflows qui peuvent traiter un ensemble de données de manière répétitive , sans intervention manuelle à chaque étape.
+> [!IMPORTANT]
+> **Automatisation du workflow**
+> Lorsque vous travaillez avec un grand nombre de séquences, exécuter les commandes manuellement pour chaque fichier devient rapidement difficile. Dans
+> de tels cas, l'automatisation devient essentielle. L'idée est de créer des scripts ou des workflows qui peuvent traiter un ensemble de données de
+> manière répétitive , sans intervention manuelle à chaque étape.
 > [initiation au workflow datacarpentry](https://datacarpentry.github.io/wrangling-genomics/05-automation.html)
 
 
