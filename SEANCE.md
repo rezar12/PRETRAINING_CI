@@ -1,3 +1,4 @@
+# QC / MAPPING / VARIANT CALLING 
 
 *Ce guide est une version revisitée du workshop **wrangling-genomics**. Voir la référence pour le lien.*
 
@@ -5,8 +6,9 @@
 
 ### Prérequis
 
-**Ma configuration : je dispose d'une machine :**
-+--------
+**Ma configuration :**
+
+je dispose d'une machine :
 - Core i3
 - 16 Go de RAM
 - 1 To d'espace de stockage (~ 50 Go suffisent largement)
