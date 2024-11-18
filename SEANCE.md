@@ -85,7 +85,8 @@ wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/001/SRR2584861/SRR2584861_2.f
 
 Capture de la sortie :
 
-![[Pasted image 20241117054012.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117054012.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117054012.png)
+
 
 
 ### Miniconda et installation de packages
