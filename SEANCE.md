@@ -273,6 +273,14 @@ Consultation des rapports FastQC et MultiQC :
 
 Vous pouvez consulter les rapports directement dans votre navigateur en ouvrant le fichier HTML du **read** à consulter pour **FastQC**, ou un visuel global en utilisant **`multiqc_report.html`**.
 
+> [!TIP]
+> **Si vous êtes utilisateur de wsl2**
+>
+> Vous pouvez ouvrir votre répertoire pour consulter vos résultats via la commande suivante :
+> ```bash
+> explorer.exe .
+> ```
+
 > [!NOTE]
 > Pour ceux qui ont des difficultés à comprendre les différentes sections du rapport généré par **FastQC**, vous pouvez consulter le lien suivant [Babraham FastQC aide](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/). Il y est expliqué en détail chaque composant du rapport, les causes possibles des erreurs, et bien d'autres informations utiles.
 
