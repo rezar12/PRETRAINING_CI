@@ -781,7 +781,7 @@ Capture de la sortie :
 > **REMARQUE**
 > Dans le fichier "merge", vous trouverez l'ensemble des noms d'accession des séquences utilisées pour sa création. Ce fichier **VCF merge** représente l'union des mutations présentes dans les différents fichiers VCF qui le composent. Cela permet de regrouper et de visualiser en un seul endroit toutes les variations génétiques identifiées à partir des différentes séquences analysées.
 
-##### Initiation aux filtrage de variant (BCFTOOLS)
+### Initiation aux filtrage de variant (BCFTOOLS)
 
 Le filtrage des variants dans un fichier VCF est une étape cruciale pour cibler des régions spécifiques ou sélectionner des variants en fonction de critères définis. Par exemple, il est possible d'extraire uniquement certaines colonnes du fichier VCF, de se concentrer sur des régions d'intérêt précises, ou encore de filtrer les variants selon des paramètres comme la profondeur de lecture, la qualité, ou leur type (SNPs, INDELs, etc.).
 
@@ -814,6 +814,7 @@ Capture de la sortie :
 
 > [!IMPORTANT]
 > **VCFFILTER ALTERNATIVE AUX OPTIONS DE FILTRE DE BCFTOOLS**
+> 
 > BCFTOOLS est un outil polyvalent et largement utilisé pour le variant calling, au même titre que Freebayes, GATK ou VARSCAN. Si vous recherchez une
 > solution légère, rapide et efficace, VCFFILTER est une excellente option pour filtrer vos variants selon des critères précis.
 
@@ -834,14 +835,17 @@ Liste de quelques outils populaires pour le variant calling :
 > 
 > Le variant calling permet d’identifier les variations génétiques au sein d’un génome étudié. Grâce à des outils comme Freebayes dans ce guide, nous
 > avons pu détecter ces variations sous forme de fichiers VCF, exploitables pour des analyses ultérieures.
+> 
 
 
 > [!IMPORTANT]
 > **Automatisation du workflow**
+> 
 > Lorsque vous travaillez avec un grand nombre de séquences, exécuter les commandes manuellement pour chaque fichier devient rapidement difficile. Dans
 > de tels cas, l'automatisation devient essentielle. L'idée est de créer des scripts ou des workflows qui peuvent traiter un ensemble de données de
 > manière répétitive , sans intervention manuelle à chaque étape.
 > [initiation au workflow datacarpentry](https://datacarpentry.github.io/wrangling-genomics/05-automation.html)
+> 
 
 
 ---
