@@ -172,6 +172,7 @@ Installation des packages
 
 > [!WARNING]
 > **ESPACE UTILISÉ**
+>
 > Sachez que l'installation de l'ensemble des outils vous coûtera en termes d'espace disque (~ 457,7 Mo).
 
 ```bash
