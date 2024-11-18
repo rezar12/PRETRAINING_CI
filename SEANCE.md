@@ -845,13 +845,21 @@ Liste de quelques outils populaires pour le variant calling :
 ---
 ### Référence :
 [Pour plus de séquence sur E .coli sur  ENA  ](https://www.ebi.ac.uk/ena/browser/view/SRA303743?show=reads)
+
 [datacarpentry wrangling-genomics](https://datacarpentry.github.io/wrangling-genomics/aio.html)
+
 [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
 [MultiQC usage](https://www.youtube.com/watch?v=qPbIlO_KWN0)
+
 [Trimmomatic](https://github.com/usadellab/Trimmomatic)
+
 [SAMTOOLS](https://www.htslib.org/)
+
 [Freebayes](https://github.com/freebayes/freebayes)
+
 [BCFTOOLS](https://samtools.github.io/bcftools/bcftools.html)
+
 
 Si vous avez des suggestions n'hésitez pas à [m'envoyer un email](mailto:rechristofer@gmail.com).
 
