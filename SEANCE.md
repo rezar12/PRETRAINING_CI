@@ -467,12 +467,14 @@ Capture de la sortie :
 
 > [!IMPORTANT]
 > **Visualisation des fichiers du trimming**
-> Un nouveau contrôle de qualité est indispensable après le trimming. Cette étape permet de vérifier si le nettoyage a correctement éliminé les bases de faible qualité et les adaptateurs, tout en conservant des reads suffisamment longs et utilisables pour les analyses suivantes.
+> Un nouveau contrôle de qualité est indispensable après le trimming. Cette étape permet de vérifier si le nettoyage a correctement éliminé les bases
+> de faible qualité et les adaptateurs, tout en conservant des reads suffisamment longs et utilisables pour les analyses suivantes.
 
 
 > [!IMPORTANT]
 > **EXERCICE**
-> *La compilation des nouveaux rapports pour les fichiers issus du trimming est laissée en exercice.*
+> 
+> La compilation des nouveaux rapports pour les fichiers issus du trimming est laissée en exercice.
 
 Capture de la sortie :
 
