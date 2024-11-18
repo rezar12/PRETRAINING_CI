@@ -498,8 +498,7 @@ Après trimming SRR2589044_1:
 *Avant Multiqc* 
 ![https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap.png)
 *Après  Trimming Multiqc*
-![https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap(2).png](https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap(2).png)
-
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap(2).png](https://github.com/rezar12/PRETRAINING_CI/blob/main/fastqc-status-check-heatmap%20(2).png)
 
 
 > [!NOTE]
