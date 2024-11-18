@@ -104,7 +104,8 @@ rm ~/miniconda3/miniconda.sh
 
 Capture de la sortie :
 
-![[Pasted image 20241117063630.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117063630.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117063630.png)
+
 
 Activation de l'environnement :
 
@@ -114,7 +115,8 @@ source ~/miniconda3/bin/activate
 
 Capture de la sortie :
 
-![[Pasted image 20241117064032.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117064032.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117064032.png)
+
 
 Ajout de conda à l'ensemble de vos shells :
 
@@ -124,7 +126,8 @@ conda init --all
 
 Capture de la sortie :
 
-![[Pasted image 20241117064929.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117064929.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117064929.png)
+
 
 Création d'un environnement pour nos analyses, autre que le base. 
 
@@ -136,7 +139,8 @@ conda create -n analyse -y
 
 Capture de la sortie :
 
-![[Pasted image 20241117071335.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117071335.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117071335.png)
+
 
 Activons notre environnement (**analyse**) :
 
@@ -147,7 +151,8 @@ conda activate analyse
 Capture de la sortie :
 	Comme vous pouvez le remarquer, on passe de l'environnement (**base**) à l'environnement (**analyse**).
 	
-![[Pasted image 20241117071518.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117071518.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117071518.png)
+
 
 Ajout de channels (banque de packages) supplémentaire:
 
@@ -159,11 +164,13 @@ conda config --add channels conda-forge
 
 Capture de la sortie :
 
-![[Pasted image 20241117072258.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117072258.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117072258.png)
+
 
 Installation des packages 
 
-> [!WARNING] ESPACE UTILISÉ
+> [!WARNING]
+> **ESPACE UTILISÉ**
 > Sachez que l'installation de l'ensemble des outils vous coûtera en termes d'espace disque (~ 457,7 Mo).
 
 ```bash
@@ -172,7 +179,7 @@ conda install fastqc multiqc trimmomatic bwa samtools freebayes bcftools -y
 
 Capture de la sortie :
 
-![[Pasted image 20241117075239.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117075239.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117075239.png)
 
 
 
@@ -184,7 +191,8 @@ conda list | grep -E "multiqc|fastqc|samtools|freebayes|trimmomatic|bcftools"
 
 Capture de la sortie :
 
-![[Pasted image 20241117080842.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117080842.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117080842.png)
+
 
 Pour en savoir plus sur conda, vous pouvez consulter le cheatsheet disponible sur le lien suivant  : [Cheatsheet](https://docs.conda.io/projects/conda/en/latest/_downloads/e0795803d81d6d87b74abed339025237/conda-24.4.0.pdf)
 
@@ -195,10 +203,12 @@ Nous disposons de deux sous-dossiers dans notre répertoire **analyse** : **raws
 
 Capture (commande **tree**) :
 
-![[Pasted image 20241117084838.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117084838.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117084838.png)
+
 
 > [!ERROR]
-> Si tree non installé,  exécutez `sudo apt install tree` 
+> Si tree non installé,  exécutez `sudo apt install tree`
+
 ##### Visualisation (FastQC / MultiQC) :
 
 Création du répertoire **result_fastqc** :
@@ -210,7 +220,8 @@ mkdir result_fastqc
 Capture de la sortie :
 *Le dossier **result_fastqc** est créé, le dossier est surligné en vert.*
 
-![[Pasted image 20241117090120.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117090120.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117090120.png)
+
 
 Exécution de **FastQC** pour la visualisation de la qualité :
 
@@ -230,7 +241,8 @@ Capture de la sortie :
 	- Un rapport HTML (consultable dans un navigateur).
 	- Un fichier ZIP contenant des données détaillées.
 
-![[Pasted image 20241117094225.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117094225.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117094225.png)
+
 
 Générons une sortie globale via **MultiQC** :
 
@@ -249,8 +261,9 @@ Capture de la sortie :
 - Exécution de **MultiQC** :
 	- Génère un fichier HTML **`multiqc_report.html`** et un dossier **`multiqc_data`**.`**
 
-![[Pasted image 20241117092209.png]]
-![[Pasted image 20241117093615.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117092209.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117092209.png)
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117093615.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117093615.png)
+
 
 Consultation des rapports FastQC et MultiQC :
 
@@ -261,15 +274,16 @@ Vous pouvez consulter les rapports directement dans votre navigateur en ouvrant 
 
 Capture FastQC (pour `SRR2584861_1.fastq.gz`) :
 
-![[Pasted image 20241117095704.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117095704.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117095704.png)
 
 
 Capture MultiQC :
 
-![[Pasted image 20241117100021.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117100021.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117100021.png)
 
-> [!NOTE] **Résumer :**
-> 
+
+> [!NOTE]
+> **Résumer :**
 > la visualisation des reads est une étape clé pour vérifier la qualité de nos données avant de passer à la suite. Grâce à ses rapports, on peut repérer les problèmes comme les bases de mauvaise qualité ou la présence d’adaptateurs. Ces infos sont super utiles pour préparer les étapes suivantes, comme le **trimming**, où on nettoie les reads pour enlever tout ce qui pourrait gêner l’analyse.
 
 ### Trimming ( Trimmomatic )
@@ -283,7 +297,8 @@ mkdir result_trimming
 ```
 
 Capture de la sortie :
-![[Pasted image 20241117113651.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117100021.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117113651.png)
+
 
 Présence d'adaptateur dans nos séquences qui sont de types `Nextera`.
 
