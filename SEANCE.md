@@ -38,7 +38,6 @@ mkdir Analyse && cd Analyse
 
 > [!WARNING]
 > **ESPACE UTILISE**
-> 
 > Le téléchargement des ressources en termes d'espace disque (~ 600 Mo).
 
 Création du dossier pour le stockage de la référence :
