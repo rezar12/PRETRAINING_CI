@@ -304,7 +304,7 @@ Présence d'adaptateur dans nos séquences qui sont de types `Nextera`.
 
 Capture de la sortie :
 
-![[Pasted image 20241117114132.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117114132.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117114132.png)
 
 Création d'un fichier pour les séquences d'adaptateurs :
 
@@ -312,7 +312,7 @@ Création d'un fichier pour les séquences d'adaptateurs :
 nano NexteraPE-PE.fa
 ```
 
-> [!ERROR]
+> [!CAUTION]
 > si nano non installé,  exécutez `sudo apt install nano` 
 
 Collez **le contenu copié** ci-dessous dans l'éditeur nano. Puis  grâce au combinaison de touches <kbd>Ctrl</kbd> + <kbd>X</kbd>  suivis de la touche <kbd>Y</kbd> pour  "yes" .
@@ -334,8 +334,8 @@ CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
 ```
 
 Capture **collez le texte** :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120704.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120704.png)
 
-![[Pasted image 20241117120704.png]]
 
 Capture **enregistrement** :
 
