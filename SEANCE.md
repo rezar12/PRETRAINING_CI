@@ -206,7 +206,7 @@ Capture (commande **tree**) :
 ![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117084838.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117084838.png)
 
 
-> [!ERROR]
+> [!CAUTION]
 > Si tree non installé,  exécutez `sudo apt install tree`
 
 ##### Visualisation (FastQC / MultiQC) :
