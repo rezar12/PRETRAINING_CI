@@ -213,7 +213,7 @@ Capture (commande **tree**) :
 > [!CAUTION]
 > Si tree non installé,  exécutez `sudo apt install tree`
 
-##### Visualisation (FastQC / MultiQC) :
+**Visualisation (FastQC / MultiQC) :**
 
 Création du répertoire **result_fastqc** :
 
