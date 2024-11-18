@@ -1,12 +1,12 @@
 
 *Ce guide est une version revisitée du workshop **wrangling-genomics**. Voir la référence pour le lien.*
 
-![re](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241116173846.png?raw=true)
+![img1](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241116173846.png?raw=true)
 
 ### Prérequis
 
 **Ma configuration : je dispose d'une machine :**
-
++--------
 - Core i3
 - 16 Go de RAM
 - 1 To d'espace de stockage (~ 50 Go suffisent largement)
@@ -37,7 +37,7 @@ mkdir Analyse && cd Analyse
     Après notre déconvenue avec les séquences de _Plasmodium falciparum (qui nécessitent plus de ressources RAM et CPU), j'opte pour une espèce plus digeste, si je peux m'exprimer ainsi :  Escherichia coli_ (E. coli).
 
 > [!WARNING]
-> ESPACE UTILISE
+> **ESPACE UTILISE**
 > **Le téléchargement des ressources en termes d'espace disque (~ 600 Mo).**
 
 Création du dossier pour le stockage de la référence :
@@ -60,8 +60,7 @@ gunzip e_coli.fasta.gz
 
 
 Capture de la sortie :
-
-![[Pasted image 20241116183921.png]]
+![img1](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20241116183921.png?raw=true)
 
 -  Reads (.fastq.gz)  
 	Lien vers ENA browser : [lien vers ENA](https://www.ebi.ac.uk/ena/browser/view/SAMN04096081?show=reads)
