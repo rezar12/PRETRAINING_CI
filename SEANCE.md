@@ -1,7 +1,7 @@
 
 *Ce guide est une version revisitée du workshop **wrangling-genomics**. Voir la référence pour le lien.*
 
-![img1](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241116183921.png)
+![img1](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241116173846.png)
 
 ### Prérequis
 
