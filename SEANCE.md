@@ -336,22 +336,22 @@ CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
 Capture **collez le texte** :
 ![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120704.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120704.png)
 
-
 Capture **enregistrement** :
 
-![[Pasted image 20241117120859.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120859.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120859.png)
 
 capture **valider l'enregistrement avec la touche `enter`**:
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120943.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117120943.png)
 
 ![[Pasted image 20241117120943.png]]
 
 
-> [!SUCCESS]  Visualisation du contenue
+> [!IMPORTANT]
+> **Visualisation du contenue**
 > exécutez la commande `cat NexteraPE.fa`
 
 Capture de la sortie :
-
-![[Pasted image 20241117121413.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png)
 
 Exécution de trimmomatic :
 
@@ -365,6 +365,7 @@ ls -l
 
 Capture de la sortie :
 
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117121413.png)
 ![[Pasted image 20241117123417.png]]
 
 Exécutons Trimmomatic sur les séquences :
@@ -388,10 +389,11 @@ SLIDINGWINDOW:4:20 MINLEN:25 HEADCROP:15 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15
 ```
 
 
-> [!SUCCESS] Commande parfaitement exécutée
->Lorsque la commande s'exécute dans de bonnes conditions, vous obtiendrez en dernière ligne ce message :
+> [!IMPORTANT]
+> **Commande parfaitement exécutée**
+> Lorsque la commande s'exécute dans de bonnes conditions, vous obtiendrez en dernière ligne ce message :
 >
->![[Pasted image 20241117124500.png]]
+> ![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117124500.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117124500.png)
 >
 
 Explication des arguments :
@@ -424,8 +426,7 @@ ls -l | grep "trim"
 ```
 
 Capture de la sortie:
-
-![[Pasted image 20241117130136.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117130136.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117130136.png)
 
 Déplaçons les fichiers du trimming dans le répertoire `result_trimming` :
 
@@ -436,8 +437,7 @@ ls -l
 ```
 
 Capture de la sortie :
-
-![[Pasted image 20241117131140.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131140.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131140.png)
 
 Créons deux sous-dossiers pour la séparation des reads appariés et non appariés :
 
@@ -446,8 +446,8 @@ mkdir {trim,untrim}
 ```
 
 Capture de la sortie :
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131542.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131542.png)
 
-![[Pasted image 20241117131542.png]]
 
 ```bash
 mv *un.trim* untrim/ && mv *.trim* trim/
@@ -455,9 +455,10 @@ mv *un.trim* untrim/ && mv *.trim* trim/
 
 Capture de la sortie :
 
-![[Pasted image 20241117131915.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131915.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117131915.png)
 
-> [!NOTE] Pour plus de commodité
+> [!IMPORTANT]
+> **Pour plus de commodité**
 > Pour la suite de nos analyses, nous utiliserons les reads appariés `trim`. Pour cela, déplaçons le dossier `trim` vers le répertoire `analyse`.
 > ```bash
 > mv trim/ ..  && cd ..
@@ -465,35 +466,37 @@ Capture de la sortie :
 
 Capture de la sortie :
 
-![[Pasted image 20241117133032.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117133032.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117133032.png)
 
 
-> [!INFO] Visualisation des fichiers du trimming
+> [!IMPORTANT]
+> **Visualisation des fichiers du trimming**
 > Un nouveau contrôle de qualité est indispensable après le trimming. Cette étape permet de vérifier si le nettoyage a correctement éliminé les bases de faible qualité et les adaptateurs, tout en conservant des reads suffisamment longs et utilisables pour les analyses suivantes.
 
 
-> [!INFO] EXERCICE
+> [!IMPORTANT]
+> **EXERCICE**
 > **La compilation des nouveaux rapports pour les fichiers issus du trimming est laissée en exercice. **
 
 Capture de la sortie :
 
 Avant SRR2584861_2 :
 
-![[Pasted image 20241117134217.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134217.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134217.png)
 
 Après trimming SRR2584861_2 :
 
-![[Pasted image 20241117134237.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134237.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134237.png)
 
 Avant SRR2589044_1 :
-
-![[Pasted image 20241117134415.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134415.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134415.png)
 
 Après trimming SRR2589044_1:
 
-![[Pasted image 20241117134442.png]]
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134442.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241117134442.png)
 
 *Avant Multiqc* 
+![https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20fastqc-status-check-heatmap.png.png](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20fastqc-status-check-heatmap.png.png)
 ![[fastqc-status-check-heatmap.png]]
 *Après  Trimming Multiqc*
 ![[fastqc-status-check-heatmap (2).png]]
