@@ -61,7 +61,7 @@ gunzip e_coli.fasta.gz
 
 Capture de la sortie :
 
-![img2](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%20241116183921.png)
+![img1](https://github.com/rezar12/PRETRAINING_CI/blob/main/Pasted%20image%2020241116173846.png)
 
 -  Reads (.fastq.gz)  
 	Lien vers ENA browser : [lien vers ENA](https://www.ebi.ac.uk/ena/browser/view/SAMN04096081?show=reads)
