@@ -1,8 +1,7 @@
 
 *Ce guide est une version revisitée du workshop **wrangling-genomics**. Voir la référence pour le lien.*
 
-![[Pasted image 20241116173846.png]]
-![image 1](Pasted image 20241116173846.png"Title")
+![image 1]("./Pasted image 20241116173846.png")
 
 ### Prérequis
 
